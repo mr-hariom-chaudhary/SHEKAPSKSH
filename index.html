@@ -16,7 +16,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: black; 
+            background-color: black;
             padding: 10px 20px;
             position: fixed;
             width: 100%;
@@ -37,25 +37,23 @@
             margin: 0 15px;
         }
 
-        
         nav ul li a {
             text-decoration: none;
-            color: yellow; 
+            color: yellow; /* Yellow color for links */
             font-size: 18px;
             padding: 10px 20px;
             transition: all 0.3s ease;
         }
 
-        
         nav ul li a:hover {
             background-color: red;
-            color: white;
-        } 
+            color: white; /* On hover, change background to red and text to white */
+        }
 
-        
+        /* Mobile-specific styles */
         @media (max-width: 768px) {
             nav ul {
-                display: flex;
+                display: none;
                 flex-direction: column;
                 background-color: #333;
                 position: absolute;
@@ -63,6 +61,10 @@
                 right: 20px;
                 width: 200px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+
+            nav ul.show {
+                display: flex;
             }
 
             nav ul li {
@@ -74,6 +76,17 @@
                 padding: 10px;
                 display: block;
                 text-align: center;
+            }
+
+            .main-content img {
+                width: 100%;
+                height: auto;
+                padding-top: 10px;
+            }
+
+            section img {
+                width: 100%;
+                height: auto;
             }
         }
 
@@ -102,12 +115,23 @@
             font-size: 18px;
             line-height: 1.6;
         }
+
+        .end-content img {
+            width: 100%;
+            height: auto;
+        }
     </style>
+    <script>
+        function toggleMenu() {
+            const navList = document.querySelector("nav ul");
+            navList.classList.toggle("show");
+        }
+    </script>
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <nav>
-        
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#work">Work</a></li>
@@ -115,16 +139,22 @@
         </ul>
     </nav>
 
-   
+    <!-- Home Section -->
     <section id="home">
         <h2>Home</h2>
         <div class="main-content">
-            <img src="7777.png" alt="Home Image">
+            <img src="7777.png" alt="Main Content Image">
         </div>
         <p>Welcome to the Shetkari Kamgar Paksh Adai Newali website!</p>
+        <!-- Contact Information under Home -->
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Email: shetkarikamgarpakshadainewali@gmail.com</p>
+            <p>Phone: +91 9920454441</p>
+        </div>
     </section>
 
-    
+    <!-- Work Section -->
     <section id="work">
         <h2>Work</h2>
         <img src="omkar9.png" alt="Work Image 1">
@@ -134,16 +164,10 @@
         <img src="ui.png" alt="Work Image 5">
     </section>
 
+    <!-- Celebrate Section -->
     <section id="celebrate">
         <h2>Celebrate</h2>
         <p>Details about the celebrations...</p>
-    </section>
-
-   
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: shetkarikamgarpakshadainewali@gmail.com</p>
-        <p>Phone: +91 9920454441</p>
     </section>
 
 </body>
