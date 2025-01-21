@@ -44,14 +44,14 @@
         nav ul {
             list-style: none;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             display: flex;
             justify-content: flex-end;
             align-items: center;
         }
 
         nav ul li {
-            margin: 0 3px;
+            margin: 0 15px;
         }
 
         nav ul li a {
@@ -64,6 +64,7 @@
             color: red;
         }
 
+        /* Mobile-specific styles */
         @media (max-width: 768px) {
             nav ul {
                 display: none;
@@ -90,18 +91,16 @@
                 display: block;
                 text-align: center;
             }
-        }
 
-        /* No changes for desktop */
-        @media (min-width: 769px) {
-            nav ul {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
+            .main-content img {
+                width: 100%;
+                height: auto;
+                padding-top: 10px;
             }
 
-            nav ul li {
-                margin: 0 15px;
+            section img {
+                width: 100%;
+                height: auto;
             }
         }
 
@@ -111,8 +110,8 @@
         }
 
         .main-content img {
-            width: 1000px;
-            height: 700px;
+            width: 100%;
+            height: auto;
         }
 
         section {
@@ -130,25 +129,6 @@
             font-size: 18px;
             line-height: 1.6;
         }
-
-        @media (min-width:320px){
-            .main-content img {
-                width: 1000px;
-                height: 700px;
-                padding-left: 45%;
-                padding-top: 5%;
-                }
-        } 
-
-        @media (min-width:320px){
-            .end-content img {
-                width: 1000px;
-                height: 700px;
-                padding-left: 45%;
-                padding-top: 5%;
-                }
-            }
-
     </style>
     <script>
         function toggleMenu() {
@@ -164,7 +144,6 @@
             <img src="logo.png" alt="Logo">
             <a href="#" class="logo">शेतकरी कामगार पक्ष आदई - नेवाळी</a>
         </div>
-    
     </nav>
 
     <div class="main-content">
@@ -173,14 +152,14 @@
 
     <section id="achievements">
         <h2>शेतकरी कामगार पक्ष कार्य</h2>
-        <img src="omkar9.png" height="700px" width="1200px" alt="omkar9">
-        <img src="254.png" height="600px" width="1300px" alt="254">
-        <img src="256.png" height="600px" width="1300px">
-        <img src="123.png" height="600px" width="1300px">
-        <img src="ui.png" height="900px" width="1300px" alt="ui">
+        <img src="omkar9.png" alt="omkar9">
+        <img src="254.png" alt="254">
+        <img src="256.png" alt="256">
+        <img src="123.png" alt="123">
+        <img src="ui.png" alt="ui">
 
         <div class="end-content">
-        <img src="999.jpg" height="700px" width="1000px" alt="999">
+            <img src="999.jpg" alt="999">
         </div>
     </section>
 
