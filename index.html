@@ -16,29 +16,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: black;
+            background-color: black; /* Black background for the navigation bar */
             padding: 10px 20px;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-        }
-
-        nav .logo-container {
-            display: flex;
-            align-items: center;
-        }
-
-        nav .logo-container img {
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        nav .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
         }
 
         nav ul {
@@ -54,19 +37,25 @@
             margin: 0 15px;
         }
 
+        /* Links have yellow text color and no underline */
         nav ul li a {
             text-decoration: none;
-            color: yellow;
+            color: yellow; /* Yellow text color */
             font-size: 18px;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
         }
 
+        /* Hover effect: change background color to red and text to white */
         nav ul li a:hover {
-            color: red;
+            background-color: red;
+            color: white; /* Text color turns white when hovered */
         }
 
+        /* Mobile-specific styles */
         @media (max-width: 768px) {
             nav ul {
-                display: none;
+                display: flex;
                 flex-direction: column;
                 background-color: #333;
                 position: absolute;
@@ -74,10 +63,6 @@
                 right: 20px;
                 width: 200px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            }
-
-            nav ul.show {
-                display: flex;
             }
 
             nav ul li {
@@ -89,34 +74,6 @@
                 padding: 10px;
                 display: block;
                 text-align: center;
-            }
-
-            .main-content img {
-                width: 100%;
-                height: auto;
-                padding-top: 10px;
-            }
-
-            section img {
-                width: 100%;
-                height: auto;
-            }
-
-            
-            .hamburger {
-                display: block;
-                width: 30px;
-                height: 30px;
-                position: relative;
-                cursor: pointer;
-            }
-
-            .hamburger div {
-                width: 100%;
-                height: 5px;
-                background-color: white;
-                margin: 6px 0;
-                transition: 0.3s;
             }
         }
 
@@ -145,82 +102,50 @@
             font-size: 18px;
             line-height: 1.6;
         }
-
-        .hamburger.open div:nth-child(1) {
-            transform: rotate(-45deg);
-            position: absolute;
-            top: 0;
-        }
-
-        .hamburger.open div:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.open div:nth-child(3) {
-            transform: rotate(45deg);
-            position: absolute;
-            top: 0;
-        }
     </style>
-    <script>
-        
-        function toggleMenu() {
-            const navList = document.querySelector("nav ul");
-            const hamburger = document.querySelector(".hamburger");
-            navList.classList.toggle("show");
-            hamburger.classList.toggle("open");
-        }
-    </script>
 </head>
 <body>
 
     <nav>
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo">
-            <a href="#" class="logo">शेतकरी कामगार पक्ष आदई - नेवाळी</a>
-        </div>
-
-        
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <!-- Navigation Links -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#celebrate">Celebrate</a></li>
+        </ul>
     </nav>
 
-   
-    <div class="main-content">
-        <img src="7777.png" alt="8888">
-    </div>
-
-    
-    <section id="work">
-        <h2>शेतकरी कामगार पक्ष कार्य</h2>
-        <img src="omkar9.png" alt="omkar9">
-        <img src="254.png" alt="254">
-        <img src="256.png" alt="256">
-        <img src="123.png" alt="123">
-        <img src="ui.png" alt="ui">
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Home</h2>
+        <div class="main-content">
+            <img src="7777.png" alt="Home Image">
+        </div>
+        <p>Welcome to the Shetkari Kamgar Paksh Adai Newali website!</p>
     </section>
 
+    <!-- Work Section -->
+    <section id="work">
+        <h2>Work</h2>
+        <img src="omkar9.png" alt="Work Image 1">
+        <img src="254.png" alt="Work Image 2">
+        <img src="256.png" alt="Work Image 3">
+        <img src="123.png" alt="Work Image 4">
+        <img src="ui.png" alt="Work Image 5">
+    </section>
+
+    <!-- Celebrate Section -->
     <section id="celebrate">
         <h2>Celebrate</h2>
         <p>Details about the celebrations...</p>
     </section>
 
-  
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
         <p>Email: shetkarikamgarpakshadainewali@gmail.com</p>
         <p>Phone: +91 9920454441</p>
     </section>
 
-    <nav>
-        <ul>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#celebrate">Celebrate</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 </body>
 </html>
